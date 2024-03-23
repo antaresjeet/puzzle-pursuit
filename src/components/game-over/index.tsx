@@ -12,7 +12,7 @@ export default function GameOver({ isWin, restartGame }: props): JSX.Element {
         ?
         <div id="you-win">
           <div id="you-win-wrapper">
-            <div id="title">Victory is yours!<br />What's your next move, champion?</div>
+            <div id="title">Victory is yours!<br />What&apos;s your next move, champion?</div>
             <button onClick={restartGame}>Try Again</button>
           </div>
         </div>
