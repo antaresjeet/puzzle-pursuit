@@ -2,6 +2,10 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Skranji&display=swap'); */
 @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Moon+Dance&display=swap");
 
+$bg-white: #f1faee;
+$bg-blue: #083656;
+$puzzle-card-bg: #f8f8f8;
+$bg-yellow: hsl(49deg 98% 60%);
 * {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -92,7 +96,7 @@
 		}
 		.card-back {
 			position: absolute;
-			background-color: #f8f8f8
+			background-color: $puzzle-card-bg
 		}
 	}
 }
@@ -102,7 +106,7 @@
 .card-wrapper .card-back {
 	height: 100%;
 	width: 100%;
-	background-color: #f8f8f8;
+	background-color: $puzzle-card-bg;
 	border-radius: 10px;
 	-webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
@@ -153,7 +157,7 @@
 	width: 600px;
 	border-radius: 10px;
 	padding: 0 50px;
-	background-color: #f1faee;
+	background-color: $bg-white;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -187,7 +191,7 @@
 	left: 5%;
 	height: 200px;
 	width: 200px;
-	background-color: #083656;
+	background-color: $bg-blue;
 	border-radius: 20px;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -267,7 +271,7 @@ button.play-btn {
 	letter-spacing: 1px;
 	font-weight: 600;
 	font-size: 17px;
-	background-color: hsl(49deg 98% 60%);
+	background-color: $bg-yellow;
 	border-radius: 50px;
 	position: relative;
 	overflow: hidden;
