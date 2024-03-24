@@ -1,0 +1,51 @@
+@media only screen and (max-width: 1199.5px) {
+	.cards-grid {
+		width: 62vw;
+		left: 59%;
+		.card-wrapper {
+			margin: 0 10px 16px;
+		}
+	}
+	.timer-container {
+		height: 160px;
+		width: 160px;
+		.time {
+			font-size: 30px;
+		}
+	}
+}
+@media only screen and (max-width: 991px) {
+	.cards-grid {
+		left: 63%;
+	}
+}
+@media only screen and (max-width: 640px) {
+	.float-card-body {
+		width: 80vw;
+	}
+
+	.float-card {
+		.card-title {
+			font-size: 22px;
+		}
+		.time-head {
+			font-size: 16px;
+		}
+	}
+	.timer-container {
+		position: unset;
+		margin: 40px auto 20px;
+	}
+	.cards-grid {
+		width: 82vw;
+		left: 50%;
+		top: 55%;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.float-card-body{
+		padding: 0 20px;
+		height: 490px;
+	}
+}

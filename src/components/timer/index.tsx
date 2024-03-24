@@ -32,8 +32,8 @@ export default function Timer({ timeLimit, gameLost }: props): JSX.Element {
   }, [timeLimit])
 
   return (
-    <div id="timer">
-      <div id="time">Timer <br />{remainingMinutes}:{remainingSeconds}</div>
+    <div className="timer-container">
+      <div className="time">Timer <br />{remainingMinutes}:{remainingSeconds}</div>
     </div>
   );
 };

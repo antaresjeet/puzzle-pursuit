@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app'
-import '../styles.css'
+import '../styles.scss'
+import '../responsive.scss'
 export default function PuzzlePursuit({
   Component,
   pageProps

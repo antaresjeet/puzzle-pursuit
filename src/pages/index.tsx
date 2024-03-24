@@ -48,17 +48,22 @@ export default function Home(): JSX.Element {
     return array;
   }
 
+  const restartGame = () => {
+    setCards(shuffle(cards))
+    setWinStatus(undefined)
+  }
+
   return (
     <div className="game-container">
       {gameStarted &&
         <Fragment>
           {winStatus === undefined && <Timer gameLost={() => setWinStatus(false)} timeLimit={59} />}
           {winStatus === undefined && <Card cards={cards} gameWon={() => setWinStatus(true)} />}
-          {winStatus !== undefined && <GameOver isWin={winStatus} restartGame={() => setWinStatus(undefined)} />}
+          {winStatus !== undefined && <GameOver isWin={winStatus} restartGame={restartGame} />}
         </Fragment>
       }
       {!gameStarted && <WelcomeScreen onGameStart={() => setGameStarted(true)} />}
-      {winStatus && <Confetti width={width} height={height} recycle={false} tweenDuration={10000} numberOfPieces={300} />}
+      {winStatus && <Confetti width={width} height={height} recycle={false} tweenDuration={20000} numberOfPieces={400} />}
     </div>
   );
 };

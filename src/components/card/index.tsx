@@ -34,7 +34,7 @@ export default function Card({ cards, gameWon }: props): JSX.Element {
       if (flippedCards.length === cards.length) {
         setTimeout(() => {
           gameWon();
-        }, 200);
+        }, 500);
       }
     }
   }
@@ -45,7 +45,7 @@ export default function Card({ cards, gameWon }: props): JSX.Element {
   }
 
   return (
-    <div id="grid">
+    <div className="cards-grid">
       {cards.map((card, index) => (
         <div key={index} className={isCardFlipped({ name: card.name, index }) ? 'flip card-wrapper' : 'card-wrapper'} data-name={card.name} onClick={() => flipCard({ name: card.name, index })}>
           <div className="card-front">
