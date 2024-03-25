@@ -1,4 +1,4 @@
-import React, { Fragment, useCallback } from 'react';
+import React, { Fragment } from 'react';
 import Card from '../components/card';
 import Timer from '../components/timer';
 import WelcomeScreen from '../components/welcome-screen';
@@ -19,22 +19,7 @@ export default function Home(): JSX.Element {
   const { width, height } = useWindowSize()
 
   useEffect(() => {
-    const cardSpawner = () => {
-      let index = 0;
-      const numberOfCards = 20;
-      const cardsArray = []
-      for (let i = 0; i < numberOfCards; i++) {
-        cardsArray.push({
-          name: puzzles[index].name,
-          img: puzzles[index].img
-        })
-        index++;
-        if (index > 9) { index = 0 };
-      }
-      setCards(shuffle(cardsArray))
-    }
-
-    cardSpawner()
+    setCards(shuffle([...puzzles, ...puzzles]))
   }, [])
 
   const shuffle = (array: Puzzle[]) => {
