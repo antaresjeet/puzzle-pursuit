@@ -23,6 +23,12 @@
 		left: 63%;
 	}
 }
+@media only screen and (max-width: 767.5px) {
+	.cards-grid .card-wrapper {
+		height: 80px;
+		width: 80px;
+	}
+}
 
 @media only screen and (max-width: 640px) {
 	.float-card-body {
@@ -39,15 +45,24 @@
 		}
 	}
 
+	.puzzle-image {
+		width: 60px;
+	}
+
 	.timer-container {
 		position: unset;
-		margin: 40px auto 20px;
+		margin: 30px auto 20px;
+		height: 130px;
+    width: 130px;
+		.time {
+			font-size: 22px;
+		}
 	}
 
 	.cards-grid {
 		width: 82vw;
 		left: 50%;
-		top: 55%;
+		top: 60%;
 	}
 }
 
@@ -55,5 +70,19 @@
 	.float-card-body {
 		padding: 0 20px;
 		height: 490px;
+	}
+}
+
+@media only screen and (max-width: 487px) {
+	.cards-grid .card-wrapper {
+		height: 73px;
+		width: 70px;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.cards-grid .card-wrapper {
+		height: 68px;
+		width: 62px;
 	}
 }

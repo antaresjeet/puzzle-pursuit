@@ -44,10 +44,10 @@ export default function Card({ cards, gameWon, onCardFlip }: CardComponentProps)
     <div className="cards-grid">
       {cards.map((card, index) => (
         <div key={index} className={isCardFlipped({ name: card.name, index }) ? 'flip card-wrapper' : 'card-wrapper'} onClick={() => flipCard({ name: card.name, index })}>
-          <div className="card-front">
-            {isCardFlipped({ name: card.name, index }) && <Image src={card.img} alt={'Puzzle'} height={100} width={100}></Image>}
+          <div className="puzzle-show">
+            {isCardFlipped({ name: card.name, index }) && <Image className='puzzle-image' src={card.img} alt={'Puzzle'}></Image>}
           </div>
-          <div className="card-back"></div>
+          <div className="puzzle-hide"></div>
         </div>
       ))}
     </div>

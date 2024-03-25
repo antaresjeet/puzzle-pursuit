@@ -1,5 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap"); */
-/* @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Skranji&display=swap'); */
 @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Moon+Dance&display=swap");
 
 $bg-white: #f1faee;
@@ -85,7 +83,7 @@ $bg-yellow: hsl(49deg 98% 60%);
 			cursor: pointer
 		}
 
-		&:hover .card-back {
+		&:hover .puzzle-hide {
 			background-color: #e7e7e7
 		}
 
@@ -98,13 +96,13 @@ $bg-yellow: hsl(49deg 98% 60%);
 			transition-duration: 200ms
 		}
 
-		.card-front {
+		.puzzle-show {
 			position: absolute;
 			-webkit-transform: rotateY(180deg);
 			transform: rotateY(180deg)
 		}
 
-		.card-back {
+		.puzzle-hide {
 			position: absolute;
 			background-color: $puzzle-card-bg
 		}
@@ -112,8 +110,8 @@ $bg-yellow: hsl(49deg 98% 60%);
 }
 
 
-.card-wrapper .card-front,
-.card-wrapper .card-back {
+.card-wrapper .puzzle-show,
+.card-wrapper .puzzle-hide {
 	height: 100%;
 	width: 100%;
 	background-color: $puzzle-card-bg;
@@ -141,7 +139,6 @@ $bg-yellow: hsl(49deg 98% 60%);
 
 .float-card {
 	position: absolute;
-	height: 100vh;
 	width: 100%;
 	/* background-color: rgba(94, 94, 94, 0.288); */
 	display: flex;
@@ -184,6 +181,11 @@ $bg-yellow: hsl(49deg 98% 60%);
 	flex-direction: column
 }
 
+.puzzle-image{
+	height: 100px;
+	width: 100px;
+}
+
 .time-head {
 	margin-top: 40px;
 	font-size: 20px;
@@ -198,7 +200,7 @@ $bg-yellow: hsl(49deg 98% 60%);
 
 .timer-container {
 	position: absolute;
-	top: 15%;
+	top: 20%;
 	left: 5%;
 	height: 200px;
 	width: 200px;
