@@ -18,7 +18,7 @@ export default function SoundPlayer({ soundAction, soundTrigger }: SoundPlayerCo
     if (audio && !muted) {
       audio.play();
     }
-  }, [audio, muted])
+  }, [audio])
 
   useEffect(() => {
     if (audio) {
