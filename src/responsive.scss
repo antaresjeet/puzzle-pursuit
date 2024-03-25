@@ -18,9 +18,12 @@
 	}
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 991.5px) {
 	.cards-grid {
 		left: 63%;
+	}
+	.float-card {
+		top: 15%;
 	}
 }
 @media only screen and (max-width: 767.5px) {
