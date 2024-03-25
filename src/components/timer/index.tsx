@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { TimerComponentProps } from '@/declarations';
 
-interface props {
-  timeLimit: number
-  gameLost: () => void
-}
-
-export default function Timer({ timeLimit, gameLost }: props): JSX.Element {
+export default function Timer({ timeLimit, gameLost }: TimerComponentProps): JSX.Element {
   const [remainingMinutes, setRemainingMinutes] = useState("0" + Math.floor(timeLimit / 60).toString());
   const [remainingSeconds, setRemainingSeconds] = useState(Math.floor(timeLimit % 60).toString());
 

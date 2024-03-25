@@ -1,12 +1,8 @@
 import { Fragment } from "react";
 import PlayButton from "../play-button";
+import { GameOverComponentProps } from "@/declarations";
 
-interface props {
-  isWin: boolean
-  restartGame: () => void
-}
-
-export default function GameOver({ isWin, restartGame }: props): JSX.Element {
+export default function GameOver({ isWin, restartGame }: GameOverComponentProps): JSX.Element {
   return (
     <Fragment>
       {isWin

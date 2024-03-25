@@ -1,11 +1,7 @@
-import { MouseEventHandler } from "react";
 import PlayButton from "../play-button";
+import { WelcomeScreenProps } from "@/declarations";
 
-interface props {
-  onGameStart: MouseEventHandler<HTMLButtonElement>
-}
-
-export default function WelcomeScreen({ onGameStart }: props): JSX.Element {
+export default function WelcomeScreen({ onGameStart }: WelcomeScreenProps): JSX.Element {
   return (
     <div className="welcome-screen float-card">
       <div className="welcome-wrapper float-card-body">

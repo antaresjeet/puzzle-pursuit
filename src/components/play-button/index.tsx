@@ -1,12 +1,6 @@
-import { MouseEventHandler } from "react";
+import { PlayButtonComponentProps } from "@/declarations";
 
-interface props {
-  clickHandler: MouseEventHandler<HTMLButtonElement>
-  beforeHoverText: string
-  afterHoverText: string
-}
-
-export default function PlayButton({ clickHandler, beforeHoverText, afterHoverText }: props): JSX.Element {
+export default function PlayButton({ clickHandler, beforeHoverText, afterHoverText }: PlayButtonComponentProps): JSX.Element {
   return (
     <button onClick={clickHandler} className="play-btn">
       <svg width="70px" height="60px" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"

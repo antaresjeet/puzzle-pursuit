@@ -6,6 +6,7 @@ $bg-white: #f1faee;
 $bg-blue: #083656;
 $puzzle-card-bg: #f8f8f8;
 $bg-yellow: hsl(49deg 98% 60%);
+
 * {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -22,9 +23,11 @@ $bg-yellow: hsl(49deg 98% 60%);
 	background-image: url('../public/images/background-doodle.png');
 	background-size: cover;
 	background-repeat: no-repeat;
+
 	img {
 		height: 10vmin
 	}
+
 	.background-lines {
 		position: absolute;
 		height: 100%;
@@ -59,6 +62,7 @@ $bg-yellow: hsl(49deg 98% 60%);
 	align-items: center;
 	-webkit-perspective: 1500px;
 	perspective: 1500px;
+
 	.card-wrapper {
 		height: 90px;
 		width: 90px;
@@ -70,17 +74,21 @@ $bg-yellow: hsl(49deg 98% 60%);
 		transition: -webkit-transform 0.5s;
 		transition: transform 0.5s;
 		transition: transform 0.5s, -webkit-transform 0.5s;
+
 		&.flip {
 			-webkit-transform: rotateY(180deg);
 			transform: rotateY(180deg);
 			pointer-events: none;
 		}
+
 		&:hover {
 			cursor: pointer
 		}
+
 		&:hover .card-back {
 			background-color: #e7e7e7
 		}
+
 		&:active {
 			-webkit-transform: scale(1.5);
 			transform: scale(1.5);
@@ -89,11 +97,13 @@ $bg-yellow: hsl(49deg 98% 60%);
 			-webkit-transition-duration: 200ms;
 			transition-duration: 200ms
 		}
+
 		.card-front {
 			position: absolute;
 			-webkit-transform: rotateY(180deg);
 			transform: rotateY(180deg)
 		}
+
 		.card-back {
 			position: absolute;
 			background-color: $puzzle-card-bg
@@ -141,6 +151,7 @@ $bg-yellow: hsl(49deg 98% 60%);
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
+
 	.card-title {
 		color: #343436;
 		font-size: 30px;
@@ -149,7 +160,7 @@ $bg-yellow: hsl(49deg 98% 60%);
 		text-align: center;
 		margin-bottom: 40px
 	}
-	
+
 }
 
 .float-card-body {
@@ -176,7 +187,7 @@ $bg-yellow: hsl(49deg 98% 60%);
 .time-head {
 	margin-top: 40px;
 	font-size: 20px;
-	text-align:center;
+	text-align: center;
 }
 
 .welcome-screen {
@@ -202,58 +213,11 @@ $bg-yellow: hsl(49deg 98% 60%);
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	.time{
+
+	.time {
 		color: #fff;
 		font-size: 40px;
 		text-align: center
-	}
-}
-
-/*------ Settings ------*/
-.container {
-	--color: #a5a5b0;
-	--size: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	cursor: pointer;
-	font-size: var(--size);
-	user-select: none;
-	fill: var(--color);
-	.mute {
-		position: absolute;
-		animation: keyframes-fill .5s;
-	}
-	.voice {
-		position: absolute;
-		display: none;
-		animation: keyframes-fill .5s;
-	}
-	input:checked~.mute {
-		display: none;
-	}
-	input:checked~.voice {
-		display: block;
-	}
-	input {
-		position: absolute;
-		opacity: 0;
-		cursor: pointer;
-		height: 0;
-		width: 0;
-	}
-}
-
-/* ------ Animation ------ */
-@keyframes keyframes-fill {
-	0% {
-		transform: rotate(0deg) scale(0);
-		opacity: 0;
-	}
-
-	50% {
-		transform: rotate(-10deg) scale(1.2);
 	}
 }
 
@@ -281,21 +245,21 @@ button.play-btn {
 		transform: scale(0.9);
 		transition: all 100ms ease;
 	}
-	
+
 	svg {
 		transition: all 0.5s ease;
 		z-index: 2;
 	}
-	
+
 	.play {
 		transition: all 0.5s ease;
 		transition-delay: 300ms;
 	}
-	
+
 	&:hover svg {
 		transform: scale(3) translate(50%);
 	}
-	
+
 	.now {
 		position: absolute;
 		left: 0;
@@ -303,15 +267,71 @@ button.play-btn {
 		transition: all 0.5s ease;
 		z-index: 2;
 	}
-	
+
 	&:hover .now {
 		transform: translateX(10px);
 		transition-delay: 300ms;
 	}
-	
+
 	&:hover .play {
 		transform: translateX(200%);
 		transition-delay: 300ms;
 	}
 }
 
+.sound-container {
+	display: flex;
+	justify-content: flex-end;
+	margin: 5px 70px;
+
+	/* The switch - the box around the speaker*/
+	.toggle-switch {
+		width: 50px;
+		height: 50px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $bg-blue;
+		border-radius: 25%;
+		cursor: pointer;
+		transition-duration: .3s;
+		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+		overflow: hidden;
+
+		.speaker {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition-duration: .3s;
+		}
+
+		.mute-speaker {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition-duration: .3s;
+		}
+	}
+}
+
+#audioButtonToggle:checked+.toggle-switch .speaker {
+	transition-duration: .3s;
+}
+
+#audioButtonToggle:checked+.toggle-switch .mute-speaker {
+	transition-duration: .3s;
+}
+
+#audioButtonToggle:active+.toggle-switch {
+	transform: scale(0.7);
+}
+
+#audioButtonToggle:hover+.toggle-switch {
+	background-color: rgb(61, 61, 61);
+}
