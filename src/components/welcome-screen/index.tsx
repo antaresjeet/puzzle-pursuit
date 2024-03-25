@@ -11,6 +11,7 @@ export default function WelcomeScreen({ onGameStart }: WelcomeScreenProps): JSX.
         <PlayButton clickHandler={onGameStart} beforeHoverText={"play"} afterHoverText={"now!"} />
         <p className="time-head">(ready player one? you&apos;ve got 59 seconds to finish this quest. challenge accepted? 🎮✨)
         </p>
+        <div className="developed-by text-center">PS. Developed by</div>
       </div>
     </div>
   );

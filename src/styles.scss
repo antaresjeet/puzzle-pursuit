@@ -323,6 +323,17 @@ button.play-btn {
 	}
 }
 
+.sound-container{
+	img{
+		width: 40px;
+  	height: auto;
+	}
+}
+.developed-by{
+	position: absolute;
+  bottom: 14px;
+}
+
 #audioButtonToggle:checked+.toggle-switch .speaker {
 	transition-duration: .3s;
 }
@@ -333,8 +344,4 @@ button.play-btn {
 
 #audioButtonToggle:active+.toggle-switch {
 	transform: scale(0.7);
-}
-
-#audioButtonToggle:hover+.toggle-switch {
-	background-color: rgb(61, 61, 61);
 }
