@@ -22,10 +22,12 @@
 	.cards-grid {
 		left: 63%;
 	}
+
 	.float-card {
 		top: 15%;
 	}
 }
+
 @media only screen and (max-width: 767.5px) {
 	.cards-grid .card-wrapper {
 		height: 80px;
@@ -56,7 +58,8 @@
 		position: unset;
 		margin: 20px auto 20px;
 		height: 130px;
-    width: 130px;
+		width: 130px;
+
 		.time {
 			font-size: 22px;
 		}
@@ -71,7 +74,7 @@
 
 @media only screen and (max-width: 576px) {
 	.float-card-body {
-		padding: 0 20px;
+		padding: 3px 20px 4px;
 		height: 490px;
 	}
 }
@@ -79,15 +82,18 @@
 @media only screen and (max-width: 487px) {
 	.cards-grid {
 		width: 87vw;
+
 		.card-wrapper {
 			height: 73px;
 			width: 70px;
 		}
 	}
+
 	.timer-container {
 		height: 110px;
 		width: 110px;
-		.time{
+
+		.time {
 			font-size: 19px;
 		}
 	}
@@ -97,23 +103,25 @@
 	.cards-grid .card-wrapper {
 		height: 68px;
 		width: 62px;
-	}	
+	}
 }
 
 @media only screen and (max-width: 390px) {
 	.cards-grid {
 		width: 92vw;
+
 		.card-wrapper {
 			margin: 0 6px 16px;
 		}
 	}
+
 	.timer-container {
 		margin: 18px auto 20px;
 	}
 }
 
 @media only screen and (max-width: 320px) {
-	.cards-grid{
+	.cards-grid {
 		height: 610px;
 	}
 }

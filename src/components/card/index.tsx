@@ -45,7 +45,7 @@ export default function Card({ cards, gameWon, onCardFlip }: CardComponentProps)
       {cards.map((card, index) => (
         <div key={index} className={isCardFlipped({ name: card.name, index }) ? 'flip card-wrapper' : 'card-wrapper'} onClick={() => flipCard({ name: card.name, index })}>
           <div className="puzzle-show">
-            {isCardFlipped({ name: card.name, index }) && <Image className='puzzle-image' src={card.img} alt={'Puzzle'}></Image>}
+            <Image className='puzzle-image' src={card.img} alt={'Puzzle'}></Image>
           </div>
           <div className="puzzle-hide"></div>
         </div>
