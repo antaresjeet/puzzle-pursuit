@@ -243,7 +243,7 @@ button.play-btn {
 	position: relative;
 	overflow: hidden;
 	transition: all 0.5s ease;
-
+	min-height: 63px;
 	&:active {
 		transform: scale(0.9);
 		transition: all 100ms ease;
@@ -322,7 +322,9 @@ button.play-btn {
 		}
 	}
 }
-
+.welcome-wrapper > .card-title{
+	margin-top: 30px;
+}
 .sound-container{
 	img{
 		width: 40px;
@@ -330,7 +332,7 @@ button.play-btn {
 	}
 }
 .developed-by{
-	margin-top: 50px;
+	margin-top: 40px;
 }
 
 #audioButtonToggle:checked+.toggle-switch .speaker {
