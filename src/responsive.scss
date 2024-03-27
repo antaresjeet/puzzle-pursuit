@@ -77,6 +77,10 @@
 		padding: 3px 20px 4px;
 		height: 490px;
 	}
+
+	.welcome-wrapper>.card-title {
+		margin-top: 5px;
+	}
 }
 
 @media only screen and (max-width: 487px) {
@@ -104,6 +108,7 @@
 		height: 68px;
 		width: 62px;
 	}
+
 	.float-card-body {
 		height: 540px;
 	}
