@@ -13,7 +13,7 @@ $bg-yellow: hsl(49deg 98% 60%);
 	font-family: "Kode Mono", monospace;
 }
 
-.main-container{
+.main-container {
 	display: flex;
 	flex-direction: column;
 	min-height: 90vh;
@@ -68,7 +68,7 @@ $bg-yellow: hsl(49deg 98% 60%);
 	-webkit-perspective: 1500px;
 	perspective: 1500px;
 	margin-bottom: 30px;
-	margin-top: 150px;
+	margin-top: 110px;
 
 	.card-wrapper {
 		height: 90px;
@@ -193,7 +193,7 @@ $bg-yellow: hsl(49deg 98% 60%);
 	min-height: 68vh;
 }
 
-.puzzle-image{
+.puzzle-image {
 	height: 100px;
 	width: 100px;
 }
@@ -255,6 +255,7 @@ button.play-btn {
 	overflow: hidden;
 	transition: all 0.5s ease;
 	min-height: 63px;
+
 	&:active {
 		transform: scale(0.9);
 		transition: all 100ms ease;
@@ -333,16 +334,19 @@ button.play-btn {
 		}
 	}
 }
-.welcome-wrapper > .card-title{
+
+.welcome-wrapper>.card-title {
 	margin-top: 30px;
 }
-.sound-container{
-	img{
+
+.sound-container {
+	img {
 		width: 40px;
-  	height: auto;
+		height: auto;
 	}
 }
-.developed-by{
+
+.developed-by {
 	margin-top: 40px;
 	margin-bottom: 18px;
 }
