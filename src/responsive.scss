@@ -68,7 +68,7 @@
 	.cards-grid {
 		width: 82vw;
 		left: 50%;
-		top: 62%;
+		margin-top: 80px;
 	}
 }
 
@@ -100,6 +100,12 @@
 		.time {
 			font-size: 19px;
 		}
+	}
+}
+
+@media screen and (max-height: 545px) {
+	.cards-grid {
+		margin-top: 90px;
 	}
 }
 

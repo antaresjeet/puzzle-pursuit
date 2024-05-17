@@ -68,6 +68,7 @@ $bg-yellow: hsl(49deg 98% 60%);
 	-webkit-perspective: 1500px;
 	perspective: 1500px;
 	margin-bottom: 30px;
+	margin-top: 150px;
 
 	.card-wrapper {
 		height: 90px;
@@ -188,7 +189,8 @@ $bg-yellow: hsl(49deg 98% 60%);
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
-	flex-direction: column
+	flex-direction: column;
+	min-height: 68vh;
 }
 
 .puzzle-image{
