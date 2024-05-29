@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /private/
+
+Sitemap: https://puzzle-pursuit.vercel.app/sitemap.xml
