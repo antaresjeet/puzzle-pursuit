@@ -7,8 +7,8 @@ import { puzzles } from '@/data/puzzles';
 import { Puzzle, SoundAction } from '@/declarations';
 import GameOver from '@/components/game-over';
 import Confetti from "react-confetti";
-import useWindowSize from "react-use/lib/useWindowSize";
 import SoundPlayer from '@/components/sound-player';
+import useWindowSize from '@/hooks/useWindowResize';
 
 export default function Home(): JSX.Element {
   const [winStatus, setWinStatus] = useState<boolean | undefined>(undefined);
@@ -16,7 +16,7 @@ export default function Home(): JSX.Element {
   const [soundAction, setSoundAction] = useState<SoundAction | undefined>();
   const [soundTrigger, setSoundTrigger] = useState<number>(0);
   const [cards, setCards] = useState<Puzzle[]>([]);
-  const { width, height } = useWindowSize()
+  const windowSize = useWindowSize()
 
   useEffect(() => {
     setCards(shuffle([...puzzles, ...puzzles]))
@@ -72,7 +72,7 @@ export default function Home(): JSX.Element {
         </Fragment>
       }
       {!gameStarted && <WelcomeScreen onGameStart={onGameStart} />}
-      {winStatus && <Confetti width={width} height={height} recycle={false} tweenDuration={20000} numberOfPieces={400} />}
+      {winStatus && <Confetti width={windowSize.width} height={windowSize.height} recycle={false} tweenDuration={20000} numberOfPieces={400} />}
     </div>
   );
 };
