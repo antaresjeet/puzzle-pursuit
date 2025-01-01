@@ -2,6 +2,9 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 import '../styles.scss'
 import '../responsive.scss'
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 export default function PuzzlePursuit({
   Component,
   pageProps
@@ -40,6 +43,8 @@ export default function PuzzlePursuit({
         <meta name="google-site-verification" content="GDMvkcIIhoR4e5RwNW-KhKKgyRi1pmKPzUpyY4arvrc" />
       </Head>
       <Component {...pageProps} />
+      <Analytics />
+      <SpeedInsights />
     </>
   )
 }

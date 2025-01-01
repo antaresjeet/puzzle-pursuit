@@ -48,3 +48,8 @@ export interface TimerComponentProps {
 export interface WelcomeScreenProps {
   onGameStart: MouseEventHandler<HTMLButtonElement>;
 }
+
+export interface WindowSize {
+  width: number;
+  height: number;
+}
